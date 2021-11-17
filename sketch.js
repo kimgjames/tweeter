@@ -9,7 +9,7 @@ let label = "waiting...";
 
 // Classifier and model url
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/BBRcqabqu/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/TClPJAzb8/';
 
 // STEP 1: Load the model!
 function preload() {
