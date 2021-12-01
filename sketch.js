@@ -17,8 +17,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 520);
-
+  var cnv = createCanvas(640, 520);
+  cnv.parent('myContainer');
   // STEP 2: Start classifying (will listen to mic by default)
   classifyAudio();
 }
