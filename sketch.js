@@ -22,7 +22,7 @@ function setup() {
   var cnv = createCanvas(640, 520);
   cnv.parent('myContainer');
 
-  img = loadImage('images/listen.jpg');
+  img = loadImage("images/listen.jpg");
 
   button = createButton('Listen Again');
   button.position(width*3/4-100, 400);
@@ -60,7 +60,7 @@ function draw() {
   textSize(100);
   fill(0)
   text(emoji, width / 2, height / 2);
-  image(img,width/2,0,50,50)
+  image(img,width/2-50,0,150,150)
 }
 
 // STEP 3: Get the classification!
