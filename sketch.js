@@ -19,7 +19,7 @@ function preload() {
 }
 
 function setup() {
-  var cnv = createCanvas(windowWidth*0.75, 520);
+  var cnv = createCanvas(640, 300);
   cnv.parent('myContainer');
 
   img = loadImage("images/listen.jpg");
@@ -59,8 +59,8 @@ function draw() {
   // Draw the emoji
   textSize(100);
   fill(0)
-  text(emoji, width / 2, height / 2);
-  image(img,width/2-50,0,150,150)
+  text(emoji, width / 2, height / 2+70);
+  image(img,width/2-70,0,150,150)
 }
 
 // STEP 3: Get the classification!
