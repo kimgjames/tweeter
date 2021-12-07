@@ -48,20 +48,28 @@ function draw() {
   // Background noise is headphones
   let emoji = "Listening...";
   // Pick an emoji based on label
+  let desc = "";
   if (label == "Cardinal") {
     emoji = "Cardinal";
+    desc = "A mid-sized red songbird which has a distinctive black crest on the head and a mask on the face.";
   } else if (label == "Blue Jay") {
     emoji = "Blue Jay";
+    desc = "Blue Jays are bright blue on top and white to gray on its throat, chest and belly.";
   } else if (label == "Robin") {
-    emoji = "Robin";
+    emoji = "Robin"
+    desc = "Gray-brown birds with warm orange underparts and dark heads.";
   }
 
   // Draw the emoji
-  textSize(100);
+  
   fill(0)
-  text(emoji, width / 2, height / 2+70);
+  textSize(100)
+  text(emoji, width / 2, (height / 2)+70);
   image(img,width/2-70,0,150,150)
+  textSize(14);
+  text(desc, width / 2, (height / 2)+130)
 }
+
 
 // STEP 3: Get the classification!
 function gotResults(error, results) {
