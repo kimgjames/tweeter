@@ -7,3 +7,7 @@ html, body {
 canvas {
   display: block;
 }
+div {
+  overflow-x: auto;
+  white-space: nowrap;
+}
