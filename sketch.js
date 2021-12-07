@@ -19,7 +19,7 @@ function preload() {
 }
 
 function setup() {
-  var cnv = createCanvas(640, 520);
+  var cnv = createCanvas(windowWidth-400, 520);
   cnv.parent('myContainer');
 
   img = loadImage("images/listen.jpg");
