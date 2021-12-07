@@ -1,9 +1,3 @@
-// Teachable Machine
-// The Coding Train / Daniel Shiffman
-// https://thecodingtrain.com/TeachableMachine/3-teachable-audio
-// https://editor.p5js.org/codingtrain/sketches/e3nrNMG7A
-
-
 // Storing the label
 let label = "waiting...";
 
@@ -17,8 +11,16 @@ function preload() {
 }
 
 function setup() {
-  var cnv = createCanvas(640, 520);
-  cnv.parent('myContainer');
+  createCanvas(640, 520);
+  
+  button = createButton('Pause');
+  button.position(width/4, 400);
+  button.mousePressed(pause);
+  
+  button = createButton('Listen Again');
+  button.position(width*3/4-100, 400);
+  button.mousePressed(play);
+
   // STEP 2: Start classifying (will listen to mic by default)
   classifyAudio();
 }
@@ -29,7 +31,7 @@ function classifyAudio() {
 }
 
 function draw() {
-  background(0);
+  background(255,255,255);
 
   // STEP 4: Draw the label
   // textSize(32);
@@ -38,7 +40,7 @@ function draw() {
   // text(label, width/2, height - 16);
 
   // Background noise is headphones
-  let emoji = "🎧";
+  let emoji = "Listening...";
   // Pick an emoji based on label
   if (label == "Cardinal") {
     emoji = "Cardinal";
@@ -50,7 +52,7 @@ function draw() {
 
   // Draw the emoji
   textSize(100);
-  fill(255)
+  fill(0)
   text(emoji, width / 2, height / 2);
 }
 
@@ -62,4 +64,12 @@ function gotResults(error, results) {
   }
   // Store the label
   label = results[0].label;
+}
+
+function pause () {
+    noLoop();
+}
+
+function play () {
+    loop();
 }
